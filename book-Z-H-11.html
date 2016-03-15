@@ -7,7 +7,7 @@
 Structure and Interpretation 
 of Computer Programs
 </title>
-<link rel="stylesheet" type="text/css" href="book-Z-C.css" title=default>
+<link rel="stylesheet" type="text/css" href="stylesheets/book-Z-C.css" title=default>
 <meta name=robots content="noindex,follow">
 </head>
 <body>
@@ -67,20 +67,20 @@ practical examples in their own right.<p>
 
 
 <a name="%_idx_636"></a><a name="%_idx_638"></a>
-<a name="%_fig_1.3"></a><p><div align=left><table width=100%><tr><td><img src="ch1-Z-G-7.gif" border="0">
+<a name="%_fig_1.3"></a><p><div align=left><table width=100%><tr><td><img src="images/ch1-Z-G-7.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 1.3:</b>&nbsp;&nbsp;A linear recursive process for computing 6!.</div></caption><tr><td>
 
 </td></tr></table></div><p><p>
 
 <a name="%_idx_640"></a>We begin by considering the factorial function, defined by<p>
 
-<p><div align=left><img src="ch1-Z-G-8.gif" border="0"></div><p><p>
+<p><div align=left><img src="images/ch1-Z-G-8.gif" border="0"></div><p><p>
 
 There are many ways to compute factorials.  One way is to make use of
 the observation that <em>n</em>! is equal to <em>n</em> times (<em>n</em> - 1)! for
 any positive integer&nbsp;<em>n</em>:<p>
 
-<p><div align=left><img src="ch1-Z-G-9.gif" border="0"></div><p><p>
+<p><div align=left><img src="images/ch1-Z-G-9.gif" border="0"></div><p><p>
 
 Thus, we can compute <em>n</em>! by computing (<em>n</em> - 1)! and multiplying the
 result by <em>n</em>.  If we add the stipulation that 1! is equal to 1,
@@ -105,16 +105,16 @@ that counts from 1 up to <em>n</em>.  We can describe the computation by
 saying that the counter and the product simultaneously change from one
 step to the next according to the rule<p>
 
-<p><p>product  <img src="book-Z-G-D-14.gif" border="0">  counter  &middot;  product <p>
+<p><p>product  <img src="images/book-Z-G-D-14.gif" border="0">  counter  &middot;  product <p>
 
-<p><p>counter  <img src="book-Z-G-D-14.gif" border="0">  counter  +  1<p>
+<p><p>counter  <img src="images/book-Z-G-D-14.gif" border="0">  counter  +  1<p>
 
 <p><p><p>
 
 and stipulating that <em>n</em>! is the value of the product when
 the counter exceeds <em>n</em>.<p>
 
-<a name="%_fig_1.4"></a><p><div align=left><table width=100%><tr><td><img src="ch1-Z-G-10.gif" border="0">
+<a name="%_fig_1.4"></a><p><div align=left><table width=100%><tr><td><img src="images/ch1-Z-G-10.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 1.4:</b>&nbsp;&nbsp;A linear iterative process for computing 6!.</div></caption><tr><td> 
 
 </td></tr></table></div><p><p>
@@ -277,10 +277,10 @@ Another common pattern of computation is called <em>tree recursion</em>.
 As an example, consider computing the sequence of <a name="%_idx_718"></a>Fibonacci numbers,
 in which each number is the sum of the preceding two:<p>
 
-<p><div align=left><img src="ch1-Z-G-11.gif" border="0"></div><p><p>
+<p><div align=left><img src="images/ch1-Z-G-11.gif" border="0"></div><p><p>
 
 In general, the Fibonacci numbers can be defined by the rule
-<p><div align=left><img src="ch1-Z-G-12.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-12.gif" border="0"></div><p>
 We can immediately translate this definition into a recursive
 procedure for computing Fibonacci numbers:<p>
 
@@ -291,7 +291,7 @@ procedure for computing Fibonacci numbers:<p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(fib&nbsp;(-&nbsp;n&nbsp;2))))))<br>
 </tt><p><p><p>
 
-<a name="%_fig_1.5"></a><p><div align=left><table width=100%><tr><td><img src="ch1-Z-G-13.gif" border="0">
+<a name="%_fig_1.5"></a><p><div align=left><table width=100%><tr><td><img src="images/ch1-Z-G-13.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 1.5:</b>&nbsp;&nbsp;The tree-recursive process generated in computing <tt>(fib 5)</tt>.</div></caption><tr><td>
 
 </td></tr></table></div><p><p>
@@ -315,12 +315,12 @@ of leaves in the above tree, in general) is precisely
 <em>F</em><em>i</em><em>b</em>(<em>n</em> + 1).  To get an idea of how bad this is, one can show that the
 value of  <em>F</em><em>i</em><em>b</em>(<em>n</em>) <a name="%_idx_722"></a>grows exponentially with <em>n</em>.  More precisely
 (see exercise&nbsp;<a href="#%_thm_1.13">1.13</a>),  <em>F</em><em>i</em><em>b</em>(<em>n</em>) is the closest
-integer to <img src="book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup> /<img src="book-Z-G-D-13.gif" border="0">5, where<p>
+integer to <img src="images/book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup> /<img src="images/book-Z-G-D-13.gif" border="0">5, where<p>
 
-<p><div align=left><img src="ch1-Z-G-14.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-14.gif" border="0"></div><p>
 is the <a name="%_idx_724"></a><em>golden ratio</em>, which satisfies the equation<p>
 
-<p><div align=left><img src="ch1-Z-G-15.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-15.gif" border="0"></div><p>
 
 Thus, the process uses a number of steps that grows exponentially
 with the input.  On the other hand, the space required grows only
@@ -335,7 +335,7 @@ Fibonacci numbers.  The idea is to use a pair of integers <em>a</em> and
 <em>b</em>, initialized to  <em>F</em><em>i</em><em>b</em>(1) = 1 and  <em>F</em><em>i</em><em>b</em>(0) = 0,
 and to repeatedly apply the simultaneous
 transformations
-<p><div align=left><img src="ch1-Z-G-16.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-16.gif" border="0"></div><p>
 It is not hard to show that, after applying this transformation <em>n</em>
 times, <em>a</em> and <em>b</em> will be equal, respectively, to  <em>F</em><em>i</em><em>b</em>(<em>n</em> + 1) and
  <em>F</em><em>i</em><em>b</em>(<em>n</em>).  Thus, we can compute Fibonacci numbers iteratively using
@@ -466,7 +466,7 @@ computes <em>f</em> by means of an iterative process.
 <b>Exercise 1.12.</b>&nbsp;&nbsp;<a name="%_idx_738"></a>The following pattern of numbers is called
 <em>Pascal's triangle</em>.<p>
 
-<p><div align=left><img src="ch1-Z-G-17.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-17.gif" border="0"></div><p>
 The numbers at the edge of the triangle are all 1, and
 each number inside the triangle is the sum of the two numbers above it.<a name="call_footnote_Temp_57" href="#footnote_Temp_57"><sup><small>35</small></sup></a>
 Write a procedure that computes elements of Pascal's triangle by means
@@ -474,11 +474,11 @@ of a recursive process.
 <p><p>
 
 <p><a name="%_thm_1.13"></a>
-<b>Exercise 1.13.</b>&nbsp;&nbsp;Prove that  <em>F</em><em>i</em><em>b</em>(<em>n</em>) is the closest integer to <img src="book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>/<img src="book-Z-G-D-13.gif" border="0">5,
-where <img src="book-Z-G-D-11.gif" border="0"> =  (1 + <img src="book-Z-G-D-13.gif" border="0">5)/2.  Hint: Let <img src="book-Z-G-D-12.gif" border="0"> =  (1 - <img src="book-Z-G-D-13.gif" border="0">5)/2.  Use
+<b>Exercise 1.13.</b>&nbsp;&nbsp;Prove that  <em>F</em><em>i</em><em>b</em>(<em>n</em>) is the closest integer to <img src="images/book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>/<img src="images/book-Z-G-D-13.gif" border="0">5,
+where <img src="images/book-Z-G-D-11.gif" border="0"> =  (1 + <img src="images/book-Z-G-D-13.gif" border="0">5)/2.  Hint: Let <img src="images/book-Z-G-D-12.gif" border="0"> =  (1 - <img src="images/book-Z-G-D-13.gif" border="0">5)/2.  Use
 induction and the definition of the Fibonacci numbers (see
-section&nbsp;<a href="#%_sec_1.2.2">1.2.2</a>) to prove that  <em>F</em><em>i</em><em>b</em>(<em>n</em>) = (<img src="book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>
- - <img src="book-Z-G-D-12.gif" border="0"><sup><em>n</em></sup>)/<img src="book-Z-G-D-13.gif" border="0">5.
+section&nbsp;<a href="#%_sec_1.2.2">1.2.2</a>) to prove that  <em>F</em><em>i</em><em>b</em>(<em>n</em>) = (<img src="images/book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>
+ - <img src="images/book-Z-G-D-12.gif" border="0"><sup><em>n</em></sup>)/<img src="images/book-Z-G-D-13.gif" border="0">5.
 
 <p><p>
 
@@ -510,10 +510,10 @@ computers that do only a fixed number of operations at a time, the
 time required will be proportional to the number of elementary machine
 operations performed.<p>
 
-<a name="%_idx_758"></a><a name="%_idx_760"></a>We say that <em>R</em>(<em>n</em>) has order of growth <img src="book-Z-G-D-3.gif" border="0">(<em>f</em>(<em>n</em>)), written
-<em>R</em>(<em>n</em>) = <img src="book-Z-G-D-3.gif" border="0">(<em>f</em>(<em>n</em>)) (pronounced ``theta of <em>f</em>(<em>n</em>)''), if there are
+<a name="%_idx_758"></a><a name="%_idx_760"></a>We say that <em>R</em>(<em>n</em>) has order of growth <img src="images/book-Z-G-D-3.gif" border="0">(<em>f</em>(<em>n</em>)), written
+<em>R</em>(<em>n</em>) = <img src="images/book-Z-G-D-3.gif" border="0">(<em>f</em>(<em>n</em>)) (pronounced ``theta of <em>f</em>(<em>n</em>)''), if there are
 positive constants <em>k</em><sub>1</sub> and <em>k</em><sub>2</sub> independent of <em>n</em> such that
-<p><div align=left><img src="ch1-Z-G-18.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-18.gif" border="0"></div><p>
 for any sufficiently large value of <em>n</em>.  (In other
 words, for large <em>n</em>, the value <em>R</em>(<em>n</em>) is sandwiched between <em>k</em><sub>1</sub><em>f</em>(<em>n</em>)
 and <em>k</em><sub>2</sub><em>f</em>(<em>n</em>).)<p>
@@ -521,21 +521,21 @@ and <em>k</em><sub>2</sub><em>f</em>(<em>n</em>).)<p>
 <a name="%_idx_762"></a><a name="%_idx_764"></a><a name="%_idx_766"></a>For instance, with the linear recursive process for computing
 factorial described in section&nbsp;<a href="#%_sec_1.2.1">1.2.1</a> the
 number of steps grows proportionally to the input <em>n</em>.  Thus, the
-steps required for this process grows as <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>).  We also saw
-that the space required grows as <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>).  For the <a name="%_idx_768"></a><a name="%_idx_770"></a><a name="%_idx_772"></a>iterative
-factorial, the number of steps is still <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) but the space is
-<img src="book-Z-G-D-3.gif" border="0">(1) -- that is, constant.<a name="call_footnote_Temp_59" href="#footnote_Temp_59"><sup><small>36</small></sup></a> The <a name="%_idx_774"></a><a name="%_idx_776"></a><a name="%_idx_778"></a>tree-recursive Fibonacci computation requires
-<img src="book-Z-G-D-3.gif" border="0">(<img src="book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>) steps and space <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>), where <img src="book-Z-G-D-11.gif" border="0"> is the
+steps required for this process grows as <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>).  We also saw
+that the space required grows as <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>).  For the <a name="%_idx_768"></a><a name="%_idx_770"></a><a name="%_idx_772"></a>iterative
+factorial, the number of steps is still <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) but the space is
+<img src="images/book-Z-G-D-3.gif" border="0">(1) -- that is, constant.<a name="call_footnote_Temp_59" href="#footnote_Temp_59"><sup><small>36</small></sup></a> The <a name="%_idx_774"></a><a name="%_idx_776"></a><a name="%_idx_778"></a>tree-recursive Fibonacci computation requires
+<img src="images/book-Z-G-D-3.gif" border="0">(<img src="images/book-Z-G-D-11.gif" border="0"><sup><em>n</em></sup>) steps and space <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>), where <img src="images/book-Z-G-D-11.gif" border="0"> is the
 golden ratio described in section&nbsp;<a href="#%_sec_1.2.2">1.2.2</a>.<p>
 
 
 Orders of growth provide only a crude description of the behavior of a
 process.  For example, a process requiring <em>n</em><sup>2</sup> steps and a process
 requiring 1000<em>n</em><sup>2</sup> steps and a process requiring 3<em>n</em><sup>2</sup> + 10<em>n</em> + 17 steps
-all have <img src="book-Z-G-D-3.gif" border="0">(<em>n</em><sup>2</sup>) order of growth.  On the other hand, order of
+all have <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em><sup>2</sup>) order of growth.  On the other hand, order of
 growth provides a useful indication of how we may expect the behavior
 of the process to change as we change the size of the problem.  For a
-<a name="%_idx_780"></a><img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) (linear) process, doubling the size will roughly double the amount
+<a name="%_idx_780"></a><img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) (linear) process, doubling the size will roughly double the amount
 of resources used.  For an <a name="%_idx_782"></a>exponential process, each increment in
 problem size will multiply the resource utilization by a constant
 factor.  In the remainder of section&nbsp;<a href="#%_sec_1.2">1.2</a>
@@ -553,10 +553,10 @@ increases?
 <p><a name="%_thm_1.15"></a>
 <b>Exercise 1.15.</b>&nbsp;&nbsp;<a name="%_idx_786"></a>The sine of an angle (specified in
 radians) can be computed by making use of the approximation
-<tt>sin</tt> <em>x</em> <img src="book-Z-G-D-20.gif" border="0">  <em>x</em>
+<tt>sin</tt> <em>x</em> <img src="images/book-Z-G-D-20.gif" border="0">  <em>x</em>
 if <em>x</em> is
 sufficiently small, and the trigonometric identity 
-<p><div align=left><img src="ch1-Z-G-19.gif" border="0"></div><p> 
+<p><div align=left><img src="images/ch1-Z-G-19.gif" border="0"></div><p> 
 to reduce the size of the argument of <tt>sin</tt>.  (For
 purposes of this exercise an angle is considered ``sufficiently
 small'' if its magnitude is not greater than 0.1 radians.) These
@@ -588,7 +588,7 @@ Consider the problem of computing the exponential of a given number.
 We would like a procedure that takes as arguments a base <em>b</em> and a
 positive integer exponent <em>n</em> and computes <em>b</em><sup><em>n</em></sup>.  One way to do this
 is via the recursive definition
-<p><div align=left><img src="ch1-Z-G-20.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-20.gif" border="0"></div><p>
 which translates readily into the procedure <p>
 
 <p><p><tt><a name="%_idx_792"></a>(define&nbsp;(expt&nbsp;b&nbsp;n)<br>
@@ -596,8 +596,8 @@ which translates readily into the procedure <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*&nbsp;b&nbsp;(expt&nbsp;b&nbsp;(-&nbsp;n&nbsp;1)))))<br>
 </tt><p><p>
-This is a linear recursive process, which requires <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) steps
-and <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) space.  Just as with factorial, we can readily
+This is a linear recursive process, which requires <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) steps
+and <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) space.  Just as with factorial, we can readily
 formulate an equivalent linear iteration:<p>
 
 
@@ -611,19 +611,19 @@ formulate an equivalent linear iteration:<p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(-&nbsp;counter&nbsp;1)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*&nbsp;b&nbsp;product))))&nbsp;<br>
 </tt><p><p>
-This version requires <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) steps and <img src="book-Z-G-D-3.gif" border="0">(1) space.<p>
+This version requires <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) steps and <img src="images/book-Z-G-D-3.gif" border="0">(1) space.<p>
 
 <a name="%_idx_796"></a>We can compute exponentials in fewer steps by using successive
 squaring.  For instance, rather than computing <em>b</em><sup>8</sup> as
-<p><div align=left><img src="ch1-Z-G-21.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-21.gif" border="0"></div><p>
 we can compute it using three multiplications:
-<p><div align=left><img src="ch1-Z-G-22.gif" border="0"></div><p><p>
+<p><div align=left><img src="images/ch1-Z-G-22.gif" border="0"></div><p><p>
 
 This method works fine for exponents that are powers of 2.  We can
 also take advantage of successive squaring in computing exponentials
 in general if we use the rule<p>
 
-<p><div align=left><img src="ch1-Z-G-23.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-23.gif" border="0"></div><p>
 We can express this method as a procedure:<p>
 
 
@@ -647,10 +647,10 @@ multiplication than computing <em>b</em><sup><em>n</em></sup>.  The size of the 
 compute therefore doubles (approximately) with every new
 multiplication we are allowed.  Thus, the number of multiplications
 required for an exponent of <em>n</em> grows about as fast as the logarithm
-of <em>n</em> to the base 2.  The process has <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>)
+of <em>n</em> to the base 2.  The process has <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>)
 growth.<a name="call_footnote_Temp_62" href="#footnote_Temp_62"><sup><small>37</small></sup></a><p>
 
-The difference between <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) growth and <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) growth
+The difference between <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) growth and <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) growth
 becomes striking as <em>n</em> becomes large.  For example, <tt>fast-expt</tt>
 for <em>n</em> = 1000 requires only 14 multiplications.<a name="call_footnote_Temp_63" href="#footnote_Temp_63"><sup><small>38</small></sup></a> It is also possible to use the idea of
 successive squaring to devise an iterative algorithm that computes
@@ -710,7 +710,7 @@ halving and uses a logarithmic number of steps.<a name="call_footnote_Temp_68" h
 a logarithmic number of steps.
 Recall the transformation of the state variables
 <em>a</em> and <em>b</em> in the <tt>fib-iter</tt> process of
-section&nbsp;<a href="#%_sec_1.2.2">1.2.2</a>: <em>a</em> <img src="book-Z-G-D-14.gif" border="0">  <em>a</em> + <em>b</em> and <em>b</em> <img src="book-Z-G-D-14.gif" border="0"> 
+section&nbsp;<a href="#%_sec_1.2.2">1.2.2</a>: <em>a</em> <img src="images/book-Z-G-D-14.gif" border="0">  <em>a</em> + <em>b</em> and <em>b</em> <img src="images/book-Z-G-D-14.gif" border="0"> 
 <em>a</em>.  Call this transformation <em>T</em>, and observe that applying <em>T</em> over
 and over again <em>n</em> times, starting with 1 and 0, produces the pair
  <em>F</em><em>i</em><em>b</em>(<em>n</em> + 1) and  <em>F</em><em>i</em><em>b</em>(<em>n</em>).  In other words, the Fibonacci
@@ -718,7 +718,7 @@ numbers are produced by applying <em>T</em><sup><em>n</em></sup>, the <em>n</em>
 transformation <em>T</em>, starting with the pair (1,0).  Now consider <em>T</em>
 to be the special case of <em>p</em> = 0 and <em>q</em> = 1 in a family of
 transformations <em>T</em><sub><em>p</em><em>q</em></sub>, where <em>T</em><sub><em>p</em><em>q</em></sub> transforms the pair (<em>a</em>,<em>b</em>)
-according to <em>a</em> <img src="book-Z-G-D-14.gif" border="0">  <em>b</em><em>q</em> + <em>a</em><em>q</em> + <em>a</em><em>p</em> and <em>b</em> <img src="book-Z-G-D-14.gif" border="0">  <em>b</em><em>p</em> + <em>a</em><em>q</em>.  Show
+according to <em>a</em> <img src="images/book-Z-G-D-14.gif" border="0">  <em>b</em><em>q</em> + <em>a</em><em>q</em> + <em>a</em><em>p</em> and <em>b</em> <img src="images/book-Z-G-D-14.gif" border="0">  <em>b</em><em>p</em> + <em>a</em><em>q</em>.  Show
 that if we apply such a transformation <em>T</em><sub><em>p</em><em>q</em></sub> twice, the effect is
 the same as using a single transformation <em>T</em><sub><em>p</em>'<em>q</em>'</sub> of the same form,
 and compute <em>p</em>' and <em>q</em>' in terms of <em>p</em> and&nbsp;<em>q</em>.  This gives us an
@@ -765,11 +765,11 @@ factors, but there is a famous algorithm that is much more efficient.<p>
 the remainder when <em>a</em> is divided by <em>b</em>, then the common divisors of
 <em>a</em> and <em>b</em> are precisely the same as the common divisors of <em>b</em> and
 <em>r</em>.  Thus, we can use the equation
-<p><div align=left><img src="ch1-Z-G-24.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-24.gif" border="0"></div><p>
 to successively reduce the problem of computing a GCD to the
 problem of computing the GCD of smaller and smaller pairs of
 integers.  For example,
-<p><div align=left><img src="ch1-Z-G-25.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch1-Z-G-25.gif" border="0"></div><p>
 reduces GCD(206,40) to GCD(2,0), which is 2.  It is
 possible to show that starting with any two positive integers and
 performing repeated reductions will always eventually produce a pair
@@ -800,9 +800,9 @@ number.<a name="call_footnote_Temp_72" href="#footnote_Temp_72"><sup><small>43</
 We can use this theorem to get an order-of-growth estimate for Euclid's
 Algorithm.  Let <em>n</em> be the smaller of the two inputs to the
 procedure.  If the process takes <em>k</em> steps, then we must have 
-<em>n</em><u>&gt;</u>  <em>F</em><em>i</em><em>b</em> (<em>k</em>) <img src="book-Z-G-D-20.gif" border="0"> <img src="book-Z-G-D-11.gif" border="0"><sup><em>k</em></sup>/<img src="book-Z-G-D-13.gif" border="0">5.  Therefore
+<em>n</em><u>&gt;</u>  <em>F</em><em>i</em><em>b</em> (<em>k</em>) <img src="images/book-Z-G-D-20.gif" border="0"> <img src="images/book-Z-G-D-11.gif" border="0"><sup><em>k</em></sup>/<img src="images/book-Z-G-D-13.gif" border="0">5.  Therefore
 the number of steps <em>k</em> grows as the logarithm (to the base
-<img src="book-Z-G-D-11.gif" border="0">) of <em>n</em>.  Hence, the order of growth is <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).<p>
+<img src="images/book-Z-G-D-11.gif" border="0">) of <em>n</em>.  Hence, the order of growth is <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).<p>
 
 <p><a name="%_thm_1.20"></a>
 <b>Exercise 1.20.</b>&nbsp;&nbsp;<a name="%_idx_852"></a><a name="%_idx_854"></a>The process that a procedure generates is of course dependent on the
@@ -826,8 +826,8 @@ In the applicative-order evaluation?
 
 <a name="%_idx_856"></a><a name="%_idx_858"></a>
 This section describes two methods for checking the primality of an
-integer <em>n</em>, one with order of growth <img src="book-Z-G-D-3.gif" border="0">(<img src="book-Z-G-D-13.gif" border="0"><em>n</em>), and a
-``probabilistic'' algorithm with order of growth <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).  The
+integer <em>n</em>, one with order of growth <img src="images/book-Z-G-D-3.gif" border="0">(<img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>), and a
+``probabilistic'' algorithm with order of growth <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).  The
 exercises at the end of this section suggest programming
 projects based on these algorithms.<p>
 
@@ -861,15 +861,15 @@ and only if <em>n</em> is its own smallest divisor.<p>
 
 The end test for <tt>find-divisor</tt> is based on the fact that if <em>n</em>
 is not prime it must have a divisor less than or equal to
-<img src="book-Z-G-D-13.gif" border="0"><em>n</em>.<a name="call_footnote_Temp_75" href="#footnote_Temp_75"><sup><small>44</small></sup></a>  This
+<img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>.<a name="call_footnote_Temp_75" href="#footnote_Temp_75"><sup><small>44</small></sup></a>  This
 means that the algorithm need only test divisors between 1 and
-<img src="book-Z-G-D-13.gif" border="0"><em>n</em>.  Consequently, the number of steps required to identify
-<em>n</em> as prime will have order of growth <img src="book-Z-G-D-3.gif" border="0">(<img src="book-Z-G-D-13.gif" border="0"><em>n</em>).<p>
+<img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>.  Consequently, the number of steps required to identify
+<em>n</em> as prime will have order of growth <img src="images/book-Z-G-D-3.gif" border="0">(<img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>).<p>
 
 <a name="%_sec_Temp_76"></a>
 <h4><a href="book-Z-H-4.html#%_toc_%_sec_Temp_76">The Fermat test</a></h4><p>
 
-<a name="%_idx_868"></a><a name="%_idx_870"></a>The <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) primality test is based on a result from number
+<a name="%_idx_868"></a><a name="%_idx_870"></a>The <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) primality test is based on a result from number
 theory known as Fermat's Little Theorem.<a name="call_footnote_Temp_77" href="#footnote_Temp_77"><sup><small>45</small></sup></a><p>
 
 <p><p><a name="%_idx_886"></a><strong>Fermat's Little Theorem:</strong> If <em>n</em> is a prime number and 
@@ -1006,10 +1006,10 @@ checks the primality of consecutive odd integers in a specified range.
 Use your procedure to find the three smallest primes larger than 1000;
 larger than 10,000; larger than 100,000; larger than 1,000,000.  Note
 the time needed to test each prime.  Since the testing algorithm has
-order of growth of <img src="book-Z-G-D-3.gif" border="0">(<img src="book-Z-G-D-13.gif" border="0"><em>n</em>), you should expect that testing
-for primes around 10,000 should take about <img src="book-Z-G-D-13.gif" border="0">10 times as long
+order of growth of <img src="images/book-Z-G-D-3.gif" border="0">(<img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>), you should expect that testing
+for primes around 10,000 should take about <img src="images/book-Z-G-D-13.gif" border="0">10 times as long
 as testing for primes around 1000.  Do your timing data bear this out?
-How well do the data for 100,000 and 1,000,000 support the <img src="book-Z-G-D-13.gif" border="0"><em>n</em>
+How well do the data for 100,000 and 1,000,000 support the <img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>
 prediction?  Is your result compatible with the notion that programs
 on your machine run in time proportional to the number of steps
 required for the computation?
@@ -1039,7 +1039,7 @@ it is different from 2?
 <b>Exercise 1.24.</b>&nbsp;&nbsp;Modify the <tt>timed-prime-test</tt> procedure of
 exercise&nbsp;<a href="#%_thm_1.22">1.22</a> to use <tt>fast-prime?</tt> (the
 Fermat method), and test each of the 12 primes you found in that
-exercise.  Since the Fermat test has <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) growth, how
+exercise.  Since the Fermat test has <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) growth, how
 would you expect the time to test primes near 1,000,000 to compare
 with the time needed to test primes near 1000?  Do your data bear this
 out?  Can you explain any discrepancy you find?
@@ -1079,7 +1079,7 @@ explicit multiplication, rather than calling <tt>square</tt>:<p>
 </tt><p><p>
 ``I don't see what difference that could make,'' says Louis.  ``I
 do.''  says Eva.  ``By writing the procedure like that, you have
-transformed the <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) process into a <img src="book-Z-G-D-3.gif" border="0">(<em>n</em>) process.''
+transformed the <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>) process into a <img src="images/book-Z-G-D-3.gif" border="0">(<em>n</em>) process.''
 Explain.
 <p><p>
 
@@ -1202,7 +1202,7 @@ less than twice the log base 2 of <em>n</em>.  The arbitrary constants
 <em>k</em><sub>1</sub> and <em>k</em><sub>2</sub> in
 the definition of order notation imply that, for a logarithmic
 process, the base to which logarithms are taken does not matter, so
-all such processes are described as <img src="book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).
+all such processes are described as <img src="images/book-Z-G-D-3.gif" border="0">(<tt>log</tt> <em>n</em>).
 
 <p><a name="footnote_Temp_63" href="#call_footnote_Temp_63"><sup><small>38</small></sup></a> You may wonder
 why anyone would care about raising numbers to the 1000th power.  See
@@ -1238,8 +1238,8 @@ illustrative examples.
 to mathematical physics.  To prove the theorem, we consider pairs
 (<em>a</em><sub><em>k</em></sub> ,<em>b</em><sub><em>k</em></sub>), where <em>a</em><sub><em>k</em></sub><u>&gt;</u> <em>b</em><sub><em>k</em></sub>, for which Euclid's Algorithm
 terminates in <em>k</em> steps.  The proof is based on the claim that, if
-(<em>a</em><sub><em>k</em>+1</sub>, <em>b</em><sub><em>k</em>+1</sub>)  <img src="book-Z-G-D-15.gif" border="0">  (<em>a</em><sub><em>k</em></sub>, <em>b</em><sub><em>k</em></sub>)
- <img src="book-Z-G-D-15.gif" border="0">  (<em>a</em><sub><em>k</em>-1</sub>, <em>b</em><sub><em>k</em>-1</sub>) are three successive pairs in the
+(<em>a</em><sub><em>k</em>+1</sub>, <em>b</em><sub><em>k</em>+1</sub>)  <img src="images/book-Z-G-D-15.gif" border="0">  (<em>a</em><sub><em>k</em></sub>, <em>b</em><sub><em>k</em></sub>)
+ <img src="images/book-Z-G-D-15.gif" border="0">  (<em>a</em><sub><em>k</em>-1</sub>, <em>b</em><sub><em>k</em>-1</sub>) are three successive pairs in the
 reduction process, then we must have <em>b</em><sub><em>k</em>+1</sub><u>&gt;</u> <em>b</em><sub><em>k</em></sub>  +  <em>b</em><sub><em>k</em>-1</sub>.
 To verify the claim, consider that a reduction step is defined by
 applying the transformation <em>a</em><sub><em>k</em>-1</sub>  =  <em>b</em><sub><em>k</em></sub>, <em>b</em><sub><em>k</em>-1</sub>  = 
@@ -1254,8 +1254,8 @@ algorithm requires to terminate.  The result is true for <em>k</em> = 1, since
 this merely requires that <em>b</em> be at least as large as 
 <em>F</em><em>i</em><em>b</em>(1) = 1.  Now, assume that the result is true for all integers less
 than or equal to <em>k</em> and establish the result for <em>k</em> + 1.  Let
-(<em>a</em><sub><em>k</em>+1</sub>, <em>b</em><sub><em>k</em>+1</sub>) <img src="book-Z-G-D-15.gif" border="0"> (<em>a</em><sub><em>k</em></sub>, <em>b</em><sub><em>k</em></sub>)
- <img src="book-Z-G-D-15.gif" border="0"> (<em>a</em><sub><em>k</em>-1</sub>, <em>b</em><sub><em>k</em>-1</sub>) be successive pairs in the
+(<em>a</em><sub><em>k</em>+1</sub>, <em>b</em><sub><em>k</em>+1</sub>) <img src="images/book-Z-G-D-15.gif" border="0"> (<em>a</em><sub><em>k</em></sub>, <em>b</em><sub><em>k</em></sub>)
+ <img src="images/book-Z-G-D-15.gif" border="0"> (<em>a</em><sub><em>k</em>-1</sub>, <em>b</em><sub><em>k</em>-1</sub>) be successive pairs in the
 reduction process.  By our induction hypotheses, we have <em>b</em><sub><em>k</em>-1</sub><u>&gt;</u>
  <em>F</em><em>i</em><em>b</em>(<em>k</em> - 1) and <em>b</em><sub><em>k</em></sub><u>&gt;</u>  <em>F</em><em>i</em><em>b</em>(<em>k</em>).  Thus, applying the claim we just
 proved together with the definition of the Fibonacci numbers gives
@@ -1263,7 +1263,7 @@ proved together with the definition of the Fibonacci numbers gives
 completes the proof of Lam&eacute;'s Theorem.
 
 <p><a name="footnote_Temp_75" href="#call_footnote_Temp_75"><sup><small>44</small></sup></a> If <em>d</em> is a divisor of <em>n</em>, then so is <em>n</em>/<em>d</em>.
-But <em>d</em> and <em>n</em>/<em>d</em> cannot both be greater than <img src="book-Z-G-D-13.gif" border="0"><em>n</em>.
+But <em>d</em> and <em>n</em>/<em>d</em> cannot both be greater than <img src="images/book-Z-G-D-13.gif" border="0"><em>n</em>.
 
 <p><a name="footnote_Temp_77" href="#call_footnote_Temp_77"><sup><small>45</small></sup></a> Pierre de Fermat (1601-1665) is considered to be the founder of
 <a name="%_idx_872"></a><a name="%_idx_874"></a>modern number theory.  He obtained many important number-theoretic

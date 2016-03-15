@@ -7,7 +7,7 @@
 Structure and Interpretation 
 of Computer Programs
 </title>
-<link rel="stylesheet" type="text/css" href="book-Z-C.css" title=default>
+<link rel="stylesheet" type="text/css" href="stylesheets/book-Z-C.css" title=default>
 <meta name=robots content="noindex,follow">
 </head>
 <body>
@@ -93,7 +93,7 @@ machine that could be constructed from electrical components.<p>
 
 <p>
 
-<a name="%_fig_5.1"></a><p><div align=left><table width=100%><tr><td><img src="ch5-Z-G-1.gif" border="0">
+<a name="%_fig_5.1"></a><p><div align=left><table width=100%><tr><td><img src="images/ch5-Z-G-1.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 5.1:</b>&nbsp;&nbsp;Data paths for a GCD machine.</div></caption><tr><td>
 
 </td></tr></table></div><p><p>
@@ -120,7 +120,7 @@ marble) at the place marked <tt>start</tt>, after placing numbers in
 registers <tt>a</tt> and <tt>b</tt>.  When the controller reaches <tt>done</tt>, we will find the value of the GCD in register <tt>a</tt>.
 
 <a name="%_fig_5.2"></a><p><div align=left><table width=100%><tr><td>
-<img src="ch5-Z-G-2.gif" border="0">
+<img src="images/ch5-Z-G-2.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 5.2:</b>&nbsp;&nbsp;Controller for a GCD machine.</div></caption><tr><td>
 
 </td></tr></table></div><p><p>
@@ -332,7 +332,7 @@ reads a pair of numbers, computes their GCD, and prints the result.
 This structure is like the driver loops we used in the interpreters of
 chapter&nbsp;4.<p>
 
-<a name="%_fig_5.4"></a><p><div align=left><table width=100%><tr><td><img src="ch5-Z-G-3.gif" border="0">
+<a name="%_fig_5.4"></a><p><div align=left><table width=100%><tr><td><img src="images/ch5-Z-G-3.gif" border="0">
 <p><p><tt>&nbsp;(controller<br>
 &nbsp;&nbsp;gcd-loop<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(assign&nbsp;a&nbsp;(op&nbsp;read))<br>
@@ -385,7 +385,7 @@ Figure&nbsp;<a href="#%_fig_5.5">5.5</a> shows the data paths and controller
 for the elaborated machine.
 The instruction<p>
 
-<a name="%_fig_5.5"></a><p><div align=left><table width=100%><tr><td><img src="ch5-Z-G-4.gif" border="0">
+<a name="%_fig_5.5"></a><p><div align=left><table width=100%><tr><td><img src="images/ch5-Z-G-4.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 5.5:</b>&nbsp;&nbsp;Data paths and controller for the elaborated GCD  machine.</div></caption><tr><td>
 
 
@@ -459,7 +459,7 @@ resulting machine's data paths, without showing how they connect to
 the rest of the machine.  The figure also shows the corresponding
 portions of the machine's controller sequence.<p>
 
-<a name="%_fig_5.7"></a><p><div align=left><table width=100%><tr><td><img src="ch5-Z-G-5.gif" border="0">
+<a name="%_fig_5.7"></a><p><div align=left><table width=100%><tr><td><img src="images/ch5-Z-G-5.gif" border="0">
 <p><p><tt>gcd-1<br>
 &nbsp;(test&nbsp;(op&nbsp;=)&nbsp;(reg&nbsp;b)&nbsp;(const&nbsp;0))<br>
 &nbsp;(branch&nbsp;(label&nbsp;after-gcd-1))<br>
@@ -468,7 +468,7 @@ portions of the machine's controller sequence.<p>
 &nbsp;(assign&nbsp;b&nbsp;(reg&nbsp;t))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd-1))<br>
 after-gcd-1<br>
-&nbsp;&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0">&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0">&nbsp;<br>
 gcd-2<br>
 &nbsp;(test&nbsp;(op&nbsp;=)&nbsp;(reg&nbsp;d)&nbsp;(const&nbsp;0))<br>
 &nbsp;(branch&nbsp;(label&nbsp;after-gcd-2))<br>
@@ -520,7 +520,7 @@ resulting controller sequence, which includes only a single copy of the
 &nbsp;(assign&nbsp;b&nbsp;(reg&nbsp;t))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd-1))<br>
 after-gcd-1<br>
-&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0"><br>
+&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0"><br>
 gcd-2<br>
 &nbsp;(test&nbsp;(op&nbsp;=)&nbsp;(reg&nbsp;b)&nbsp;(const&nbsp;0))<br>
 &nbsp;(branch&nbsp;(label&nbsp;after-gcd-2))<br>
@@ -547,13 +547,13 @@ gcd-done<br>
 &nbsp;(test&nbsp;(op&nbsp;=)&nbsp;(reg&nbsp;continue)&nbsp;(const&nbsp;0))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 &nbsp;(branch&nbsp;(label&nbsp;after-gcd-1))<br>
 &nbsp;(goto&nbsp;(label&nbsp;after-gcd-2))<br>
-&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0"><br>
+&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0"><br>
 <em>;;&nbsp;Before&nbsp;branching&nbsp;to&nbsp;<tt>gcd</tt>&nbsp;from&nbsp;the&nbsp;first&nbsp;place&nbsp;where</em><br>
 <em>;;&nbsp;it&nbsp;is&nbsp;needed,&nbsp;we&nbsp;place&nbsp;0&nbsp;in&nbsp;the&nbsp;<tt>continue</tt>&nbsp;register</em><br>
 &nbsp;(assign&nbsp;continue&nbsp;(const&nbsp;0))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd))<br>
 after-gcd-1<br>
-&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0"><br>
+&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0"><br>
 <em>;;&nbsp;Before&nbsp;the&nbsp;second&nbsp;use&nbsp;of&nbsp;<tt>gcd</tt>,&nbsp;we&nbsp;place&nbsp;1&nbsp;in&nbsp;the&nbsp;<tt>continue</tt>&nbsp;register</em><br>
 &nbsp;(assign&nbsp;continue&nbsp;(const&nbsp;1))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd))<br>
@@ -574,13 +574,13 @@ the duplicate controller sequence in figure&nbsp;<a href="#%_fig_5.8">5.8</a>.</
 &nbsp;(goto&nbsp;(label&nbsp;gcd))<br>
 gcd-done<br>
 &nbsp;(goto&nbsp;(reg&nbsp;continue))<br>
-&nbsp;&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0"><br>
+&nbsp;&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0"><br>
 <em>;;&nbsp;Before&nbsp;calling&nbsp;<tt>gcd</tt>,&nbsp;we&nbsp;assign&nbsp;to&nbsp;<tt>continue</tt></em><br>
 <em>;;&nbsp;the&nbsp;label&nbsp;to&nbsp;which&nbsp;<tt>gcd</tt>&nbsp;should&nbsp;return.</em><br>
 &nbsp;(assign&nbsp;continue&nbsp;(label&nbsp;after-gcd-1))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd))<br>
 after-gcd-1<br>
-&nbsp;&nbsp;&nbsp;<img src="book-Z-G-D-18.gif" border="0"><br>
+&nbsp;&nbsp;&nbsp;<img src="images/book-Z-G-D-18.gif" border="0"><br>
 <em>;;&nbsp;Here&nbsp;is&nbsp;the&nbsp;second&nbsp;call&nbsp;to&nbsp;<tt>gcd</tt>,&nbsp;with&nbsp;a&nbsp;different&nbsp;continuation.</em><br>
 &nbsp;(assign&nbsp;continue&nbsp;(label&nbsp;after-gcd-2))<br>
 &nbsp;(goto&nbsp;(label&nbsp;gcd))<br>
@@ -805,7 +805,7 @@ recursive call, the answer is in <tt>val</tt>.
 Figure&nbsp;<a href="#%_fig_5.12">5.12</a> shows the controller sequence for this
 machine.<p>
 
-<a name="%_fig_5.11"></a><p><div align=left><table width=100%><tr><td><img src="ch5-Z-G-6.gif" border="0">
+<a name="%_fig_5.11"></a><p><div align=left><table width=100%><tr><td><img src="images/ch5-Z-G-6.gif" border="0">
 <p><p><tt>(controller<br>
 &nbsp;&nbsp;&nbsp;(assign&nbsp;continue&nbsp;(label&nbsp;fact-done))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>;&nbsp;set&nbsp;up&nbsp;final&nbsp;return&nbsp;address</em><br>
 &nbsp;fact-loop<br>

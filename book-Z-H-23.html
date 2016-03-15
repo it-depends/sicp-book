@@ -7,7 +7,7 @@
 Structure and Interpretation 
 of Computer Programs
 </title>
-<link rel="stylesheet" type="text/css" href="book-Z-C.css" title=default>
+<link rel="stylesheet" type="text/css" href="stylesheets/book-Z-C.css" title=default>
 <meta name=robots content="noindex,follow">
 </head>
 <body>
@@ -92,8 +92,8 @@ returning to the bank account example, suppose that Peter withdraws
 $10 and Paul withdraws $25 from a <a name="%_idx_3588"></a>joint account that initially
 contains $100, leaving $65 in the account.  Depending on the order
 of the two withdrawals, the sequence of balances in the account is
-either $100 <img src="book-Z-G-D-15.gif" border="0"> $90 <img src="book-Z-G-D-15.gif" border="0"> $65 or
-$100 <img src="book-Z-G-D-15.gif" border="0"> $75 <img src="book-Z-G-D-15.gif" border="0"> $65.  In a computer implementation
+either $100 <img src="images/book-Z-G-D-15.gif" border="0"> $90 <img src="images/book-Z-G-D-15.gif" border="0"> $65 or
+$100 <img src="images/book-Z-G-D-15.gif" border="0"> $75 <img src="images/book-Z-G-D-15.gif" border="0"> $65.  In a computer implementation
 of the banking system, this changing sequence of balances could be
 modeled by successive assignments to a variable <tt>balance</tt>.<p>
 
@@ -179,7 +179,7 @@ must ensure that money is conserved.
 To make concurrent programs behave correctly, we may have to
 place some restrictions on concurrent execution.<p>
 
-<a name="%_fig_3.29"></a><p><div align=left><table width=100%><tr><td><img src="ch3-Z-G-31.gif" border="0">
+<a name="%_fig_3.29"></a><p><div align=left><table width=100%><tr><td><img src="images/ch3-Z-G-31.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 3.29:</b>&nbsp;&nbsp;Timing diagram showing how interleaving the order of events
 in two banking withdrawals can lead to an incorrect final balance.</div></caption><tr><td>
 <a name="%_idx_3602"></a>
@@ -203,7 +203,7 @@ But there should be no problem
 permitting Paul's deposit to his private account to proceed
 concurrently with Peter's withdrawal from the shared account.<p>
 
-<a name="%_fig_3.30"></a><p><div align=left><table width=100%><tr><td><img src="ch3-Z-G-32.gif" border="0">
+<a name="%_fig_3.30"></a><p><div align=left><table width=100%><tr><td><img src="images/ch3-Z-G-32.gif" border="0">
 </td></tr><caption align=bottom><div align=left><b>Figure 3.30:</b>&nbsp;&nbsp;Concurrent deposits and withdrawals from a joint account
 in Bank1 and a private account in Bank2.</div></caption><tr><td>
 
@@ -273,7 +273,7 @@ ordered events (<em>x</em>,<em>y</em>,<em>z</em>).  If the two processes run con
 no constraints on how their execution is interleaved, then there are
 20 different possible orderings for the events that are consistent
 with the individual orderings for the two processes:
-<p><div align=left><img src="ch3-Z-G-33.gif" border="0"></div><p>
+<p><div align=left><img src="images/ch3-Z-G-33.gif" border="0"></div><p>
 As programmers designing this system, we would have to consider the
 effects of each of these 20 orderings and check that each behavior is
 acceptable.  Such an approach rapidly becomes unwieldy as the numbers
